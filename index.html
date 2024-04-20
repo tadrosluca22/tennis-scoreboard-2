@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennis Scoreboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="istockphoto-935055496-612x612.jpg" type="image/x-icon">
+<style>
+  
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <h1 class="grid-item" id="header">Tennis / Paddle Tennis Scoreboard</h1>
+  <input class="grid-item" id="p1" placeholder="Player 1">
+  <input class="grid-item" id="p2" placeholder="Player 2">
+  
+  <div class="grid-item inGameScore" id="ptsp1">0</div>
+  <div class="grid-item inGameScore" id="ptsp2">0</div>
+  <div class="grid-item" id="gamesp1">0</div>
+  <div class="grid-item" id="gamesp2">0</div>
+  <div class="grid-item" id="setsp1">0</div>
+  <div class="grid-item" id="setsp2">0</div>
+  <button onclick="reset()" class="grid-item" id="null">RESET</button>
+  <button onclick="p1wb() ; checkWinner() ; checkSetsP1()" class="grid-item" id="p1plus">Player 1 Scores</button>
+  <button onclick="p2wb() ; checkWinner() ; checkSetsP2()" class="grid-item" id="p2plus">Player 2 Scores</button>
+  
+  <div class="grid-item settings" id="settings">
+    <!-- <form id="choiceDeOrAD"> -->
+      <!-- <input type="checkbox" id="deciding">
+      <label for="deciding"> Deciding point</label>
+      <input type="checkbox" id="Ad">
+      <label for="Ad">Deuce</label>
+      <button onclick="AdOrDec()">Submit</button> -->
+    <!-- </form> -->
+    <label for="multipleChoice"><b>When 40-40:</b></label>
+    <select id="multipleChoice" name="multipleChoice">
+      <option value="Please choose in the box on the right" disabled selected>Choose</option>
+      <option value="Deciding Point">Deciding Point</option>
+      <option value="AD">AD</option>
+    </select>
+    <br>
+    <label for="multipleChoice1"><b>Number of games in a set:</b></label>
+    <select id="multipleChoice1" name="multipleChoice1">
+      <option value="Please choose in the box on the right" selected disabled>Choose</option>
+      <option value="4">4</option>
+      <option value="6">6</option>
+    </select>
+    <br>
+    <label for="multipleChoice2"><b>Number of sets:</b></label>
+    <input type="number" id="multipleChoice2" required>
+    <br>
+    <button onclick="settingschoice()">Submit</button>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

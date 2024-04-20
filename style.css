@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2196F3;
+}
+
+.grid-container {
+
+    display: grid;
+    grid-template-areas:
+      "title title title title"
+      "playerOne playerOne playerTwo playerTwo"
+      "pointsPOne pointsPOne pointsPTwo pointsPTwo"
+      "sp1 gamesPOne gamesPTwo sp2"
+      "p1p p1p p2p p2p"
+      "no no no no"
+      "Deciding Deciding Deciding Deciding"
+      ;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+#header {
+    grid-area: title;
+}
+#p1{
+    grid-area: playerOne;
+}
+#p2{
+    grid-area: playerTwo;
+}
+#ptsp1{
+    grid-area: pointsPOne;
+}
+#ptsp2{
+    grid-area: pointsPTwo;
+}
+#null{
+    grid-area: no;
+}
+#gamesPOne{
+    grid-area: gamesPOne;
+}
+#gamesPTwo{
+    grid-area: gamesPTwo;
+}
+#p1plus{
+    grid-area: p1p ;
+}
+#p2plus{
+    grid-area: p2p ;
+}
+
+::placeholder {
+    color: black;
+}
+#settings{
+  margin: 10px;
+  grid-area: Deciding;
+  text-align: center;
+}
+#gamesOutput, #deuceOutput, #setsOutput{
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+#setsp1{
+  grid-area: sp1;
+}
+#setsp2{
+  grid-area: sp2;
+}
+
+
+@media (max-width: 500px) {
+  .grid-container {
+     display: grid;
+     grid-template-areas:
+       "title title"
+       "playerOne playerTwo"
+       "pointsPOne pointsPTwo"
+       "gamesPOne gamesPTwo"
+       "setsPOne setsPTwo"
+       "p1p p2p"
+       "no no"
+       "settings settings";
+     grid-template-columns: 1fr 1fr;
+     gap: 10px;
+     background-color: #2196F3;
+     padding: 10px;
+   }
+ 
+  .grid-item {
+     background-color: rgba(255, 255, 255, 0.8);
+     border: 1px solid rgba(0, 0, 0, 0.8);
+     padding: 20px;
+     font-size: 30px;
+     text-align: center;
+   }
+ 
+   button {
+     font-size: 24px;
+     padding: 10px 20px;
+     margin: 10px;
+     cursor: pointer;
+   }
+ 
+   #header {
+     grid-area: title;
+   }
+ 
+   #p1 {
+     grid-area: playerOne;
+   }
+ 
+   #p2 {
+     grid-area: playerTwo;
+   }
+ 
+   #ptsp1 {
+     grid-area: pointsPOne;
+   }
+ 
+   #ptsp2 {
+     grid-area: pointsPTwo;
+   }
+ 
+   #null {
+     grid-area: no;
+   }
+ 
+   #gamesp1 {
+     grid-area: gamesPOne;
+   }
+ 
+   #gamesp2 {
+     grid-area: gamesPTwo;
+   }
+ 
+   #p1plus {
+     grid-area: p1p ;
+   }
+ 
+   #p2plus {
+     grid-area: p2p ;
+   }
+ 
+   #settings{
+     grid-area: settings;
+   }
+ 
+   #setsp1{
+     grid-area: setsPOne;
+ 
+   }
+ 
+   #setsp2{
+     grid-area: setsPTwo;
+   }
+ 
+   body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+     background-color: #2196F3;
+   }
+ 
+   ::placeholder {
+     color: black;
+   }
+ }
